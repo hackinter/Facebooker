@@ -7,6 +7,18 @@ import cookielib
 import random
 import threading
 
+# Function to print banner
+def print_banner():
+    banner = """
+      ███████╗ █████╗  ██████╗███████╗██████╗  ██████╗  ██████╗ ██╗  ██╗███████╗██████╗ 
+      ██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝██╔════╝██╔══██╗
+      █████╗  ███████║██║     █████╗  ██████╔╝██║   ██║██║   ██║█████╔╝ █████╗  ██████╔╝
+      ██╔══╝  ██╔══██║██║     ██╔══╝  ██╔══██╗██║   ██║██║   ██║██╔═██╗ ██╔══╝  ██╔══██╗
+      ██║     ██║  ██║╚██████╗███████╗██████╔╝╚██████╔╝╚██████╔╝██║  ██╗███████╗██║  ██║
+      ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+    """
+    print(banner)
+
 # Setup user-agents for random selection
 useragents = [
     'Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0',
@@ -90,6 +102,7 @@ def search_password(br, email, passwordlist):
 
 # Main function
 def main():
+    print_banner()  # Print the banner at the start
     email, passwordlist = get_input()
     br = setup_browser()
     search_password(br, email, passwordlist)
